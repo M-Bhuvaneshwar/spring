@@ -5,8 +5,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
 	public static void main(String[] args) {
-		
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringBeanConfiguration.class);
+																		// we can give any no of config files with comma separation
+		ApplicationContext ctx = new AnnotationConfigApplicationContext( SpringBeanConfiguration2.class,SpringBeanConfiguration.class);
 															// it is a configuration class
 		
 		// in the above mentioned configuration class it search for the "std"
@@ -15,6 +15,7 @@ public class Main {
 		
 		
 		Student std1 = (Student) ctx.getBean("std1");
+		Student std2 = (Student) ctx.getBean("std2");
 	
 		
 		College clg = (College) ctx.getBean("clg");

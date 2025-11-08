@@ -4,20 +4,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class SpringBeanConfiguration {
+public class SpringBeanConfiguration2 {
 
 	
 	//we are saying that take the "std" bean a give it to me when i asked
 	//here we are created the object creation by our own and give it to the spring container
-	@Bean("std")
+	@Bean("std2")
 	public Student student1() {
+		System.out.println("i am form the second config");
+
 		System.out.println("student1 bean is created");
-		return new Student();
-	}
-	
-	@Bean("std1")
-	public Student student2() {
-		System.out.println("student2 bean is created");
 		return new Student();
 	}
 	
